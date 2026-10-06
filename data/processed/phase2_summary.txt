@@ -1,0 +1,41 @@
+TouchFree Phase 2 Verification
+MediaPipe version: 0.10.31
+Model asset present: True (E:\TouchFreeData\hagrid\models\hand_landmarker.task)
+Total manifest images: 12537
+Preprocessing successful images: 11215
+Preprocessing failures/no-hand: 1322
+Preprocessing detection rate: 89.46%
+Landmark rows: 12537
+Landmark successful detections: 11215
+Landmark failed/no-hand rows: 1322
+Landmark features per row: 63
+Missing source images: 0
+Corrupt/unreadable source images: 0
+Preprocessing failure log rows: 1322
+Duplicate source paths: 0
+Duplicate source paths crossing splits: 0
+Duplicate landmark image IDs: 0
+Missing landmark image IDs: 0
+Unexpected landmark image IDs: 0
+Phase 2 visual check images: 14
+Other pre-existing visual check images preserved: 14
+
+Class counts (manifest / preprocessed / landmark detections):
+  dislike: 1589 / 1347 / 1347
+  fist: 1561 / 1410 / 1410
+  like: 1512 / 1327 / 1327
+  no_gesture: 3098 / 2764 / 2764
+  one: 1569 / 1400 / 1400
+  palm: 1596 / 1507 / 1507
+  peace: 1612 / 1460 / 1460
+
+Split counts (manifest / preprocessed / landmark detections):
+  train: 8779 / 7869 / 7869 (3051 users)
+  val: 1900 / 1688 / 1688 (654 users)
+  test: 1858 / 1658 / 1658 (654 users)
+Subject overlap:
+  train ∩ val: 0
+  train ∩ test: 0
+  val ∩ test: 0
+
+Verification: PASS

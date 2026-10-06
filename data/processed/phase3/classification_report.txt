@@ -1,0 +1,11 @@
+Baseline CNN test classification report
+Class                 Precision   Recall   F1-score   Support
+dislike              0.7891      0.9224   0.8505      219
+fist                 0.8738      0.8905   0.8821      210
+like                 0.8190      0.9500   0.8796      200
+no_gesture           0.8095      0.6041   0.6919      394
+one                  0.7647      0.8450   0.8029      200
+palm                 0.9060      0.9258   0.9158      229
+peace                0.7923      0.7961   0.7942      206
+Accuracy: 0.8215
+Macro F1: 0.8310

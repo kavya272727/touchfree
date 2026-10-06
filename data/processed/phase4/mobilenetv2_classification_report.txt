@@ -1,0 +1,13 @@
+MobileNetV2 test classification report
+Class                 Precision   Recall   F1-score   Support
+dislike              0.8919      0.9041   0.8980      219
+fist                 0.8540      0.9190   0.8853      210
+like                 0.8774      0.9300   0.9029      200
+no_gesture           0.7143      0.6345   0.6720      394
+one                  0.8343      0.7550   0.7927      200
+palm                 0.9021      0.9258   0.9138      229
+peace                0.7759      0.8738   0.8219      206
+Accuracy: 0.8263
+Macro precision: 0.8357
+Macro recall: 0.8489
+Macro F1: 0.8409

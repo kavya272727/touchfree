@@ -1,0 +1,43 @@
+TouchFree Phase 3 Baseline CNN Summary
+Python: 3.13.7
+TensorFlow: 2.21.0
+NumPy: 2.5.3
+Compute devices: CPU
+Total fixed manifest rows: 12537
+Valid CNN images: 11215
+Excluded no-hand rows: 1322
+Unique users: 4359
+Image shape/dtype/range: (12537, 224, 224, 3) / float32 / [0.0, 1.0]
+Class order and IDs: {'dislike': 0, 'fist': 1, 'like': 2, 'no_gesture': 3, 'one': 4, 'palm': 5, 'peace': 6}
+Manifest class counts: {'no_gesture': 3098, 'dislike': 1589, 'fist': 1561, 'like': 1512, 'one': 1569, 'palm': 1596, 'peace': 1612}
+Valid class counts: {'no_gesture': 2764, 'dislike': 1347, 'fist': 1410, 'like': 1327, 'one': 1400, 'palm': 1507, 'peace': 1460}
+Valid split counts: {'train': 7869, 'val': 1688, 'test': 1658}
+Split: fixed user-based train/val/test assignments from Phase 1; no re-splitting
+User overlap: none ({'train': 3051, 'val': 654, 'test': 654})
+Architecture: Conv2D(32,3)-MaxPool; Conv2D(64,3)-MaxPool; Conv2D(128,3)-MaxPool; Flatten; Dense(128); Dropout(0.5); Dense(7, softmax)
+Input size: (None, 224, 224, 3)
+Trainable parameters: 11,169,863
+Batch size: 32
+Maximum epochs: 20
+Completed epochs: 7
+Best validation-loss epoch: 4
+Learning rate (initial): 0.001
+Random seed: 2026
+Augmentation: none
+Class weights: training-only balanced weights; dislike=1.1934, fist=1.1673, like=1.2127, no_gesture=0.5718, one=1.1413, palm=1.0727, peace=1.0830
+Training time seconds: 2175.83
+Best epoch train loss/accuracy: 0.5262 / 0.7953
+Best epoch validation loss/accuracy: 0.5921 / 0.8134
+Held-out test loss: 0.5819
+Held-out test accuracy: 0.8215
+Held-out test macro F1: 0.8310
+Test predictions and metrics were computed once after best-epoch selection; test data was not used for training, early stopping, checkpointing, or hyperparameter decisions. One non-predictive test batch was inspected before training for shape/label sanity only; no test metrics were computed from it.
+
+Per-class test metrics:
+  dislike: precision=0.7891, recall=0.9224, f1=0.8505, support=219
+  fist: precision=0.8738, recall=0.8905, f1=0.8821, support=210
+  like: precision=0.8190, recall=0.9500, f1=0.8796, support=200
+  no_gesture: precision=0.8095, recall=0.6041, f1=0.6919, support=394
+  one: precision=0.7647, recall=0.8450, f1=0.8029, support=200
+  palm: precision=0.9060, recall=0.9258, f1=0.9158, support=229
+  peace: precision=0.7923, recall=0.7961, f1=0.7942, support=206

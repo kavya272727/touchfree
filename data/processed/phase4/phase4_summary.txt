@@ -1,0 +1,36 @@
+TouchFree Phase 4 MobileNetV2 Summary
+Python: 3.13.7
+TensorFlow: 2.21.0
+NumPy: 2.5.3
+Backbone: MobileNetV2 ImageNet weights, include_top=False, alpha=1.0
+Input transform: Phase 2 [0,1] RGB values scaled to [0,255], then Keras MobileNetV2 preprocess_input to [-1,1]
+Class order/IDs: {'dislike': 0, 'fist': 1, 'like': 2, 'no_gesture': 3, 'one': 4, 'palm': 5, 'peace': 6}
+Total fixed manifest images: 12537
+Valid CNN images: 11215; excluded no-hand: 1322
+Valid class counts: {'no_gesture': 2764, 'dislike': 1347, 'fist': 1410, 'like': 1327, 'one': 1400, 'palm': 1507, 'peace': 1460}
+Valid split counts: {'train': 7869, 'val': 1688, 'test': 1658}
+Unique users: 4359; subject overlap: none
+Stage A: frozen backbone, max epochs=8, lr=0.001
+Stage B: last 30 backbone layers selectively unfrozen, BatchNorm frozen, max epochs=5, lr=1e-05
+Head dropout: 0.2; data augmentation: none
+Batch size: 32; early stopping patience: 2; seed: 2026
+Total parameters: 2,266,951
+Stage A trainable parameters: 8,967
+Stage B total trainable parameters: 1,519,687
+Stage B backbone trainable parameters: 1,510,720
+Stage A resumed from the saved pilot checkpoint: True
+Training time: 1369.36 seconds
+Best checkpoint: mobilenetv2_best.keras; selected at global epoch 8 in stage_b_finetune, best val_loss=0.61951
+Test loss: 0.6033; test accuracy: 0.8263; macro precision: 0.8357; macro recall: 0.8489; macro F1: 0.8409
+Approximate inference time: 0.3014 seconds per batch of up to 8 train images (warmup + 5 repeats)
+Test was not used in pre-training sanity checks, training, checkpoint selection, or callbacks; it was traversed once after training for final metrics.
+Phase 3 baseline comparison: accuracy 0.8215; macro F1 0.8310
+
+Per-class test metrics:
+  dislike: precision=0.8919, recall=0.9041, f1=0.8980, support=219
+  fist: precision=0.8540, recall=0.9190, f1=0.8853, support=210
+  like: precision=0.8774, recall=0.9300, f1=0.9029, support=200
+  no_gesture: precision=0.7143, recall=0.6345, f1=0.6720, support=394
+  one: precision=0.8343, recall=0.7550, f1=0.7927, support=200
+  palm: precision=0.9021, recall=0.9258, f1=0.9138, support=229
+  peace: precision=0.7759, recall=0.8738, f1=0.8219, support=206
