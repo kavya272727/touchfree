@@ -88,3 +88,10 @@ desktop.ini
 # Don't include Phase 5 model files for now
 *phase5*.keras
 *phase5*.h5
+
+# Large trained models - keep out of Git
+data/models/baseline_cnn.keras
+data/models/baseline_cnn_best.keras
+
+# Phase 5 experimental artifacts
+data/processed/phase5/
